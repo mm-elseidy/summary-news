@@ -286,6 +286,7 @@ nav .search-icon {
     background-image: url("../images/landing-bg.png");
     background-size: cover;
     position: relative;
+    background-position: center;
 }
 
 .container .main-title {
@@ -337,7 +338,6 @@ nav .search-icon {
 
 .breaking .sec-boxes .categories {
     background: var(--light-bg);
-    min-height: 500px;
 }
 
 .breaking .categories .head {
@@ -437,9 +437,9 @@ nav .search-icon {
         left: 10px;
     }
     .breaking .sec-boxes {
-        grid-template-columns: 60% 30%;
+        grid-template-columns: 20% 70%;
     }
-    .breaking .sec-boxes .categories {
+    .breaking .sec-boxes .box-2 {
         display: none;
     }
 }
@@ -447,13 +447,18 @@ nav .search-icon {
 @media(max-width: 850px) {
     .breaking .sec-boxes {
         grid-template-columns: 100%;
+        grid-template-rows: 25% 70%;
+        height: 800px;
     }
     .breaking .box-2 {
         display: flex;
         gap: 25px;
     }
-    .breaking .box-1 {
-        display: none;
+    .breaking .categories a {
+        display: inline-block;
+    }
+    .breaking .categories {
+        text-align: center;
     }
 }
 
@@ -507,7 +512,6 @@ nav .search-icon {
 
 .lastest .sec-boxes .stocks {
     background: var(--light-bg);
-    min-height: 500px;
 }
 
 .lastest .stocks .head {
@@ -587,9 +591,6 @@ nav .search-icon {
 }
 
 @media(max-width: 1100px) {
-    .lastest .sec-boxes .stocks {
-        display: none;
-    }
     .lastest .sec-boxes {
         grid-template-columns: 95%;
     }
@@ -599,6 +600,14 @@ nav .search-icon {
     }
     .lastest .sec-title {
         left: 10px;
+    }
+    .lastest .main-box .small-box {
+        text-align: center;
+    }
+    .lastest .main-box .small-box p {
+        max-width: 350px;
+        margin: auto;
+        text-align: left;
     }
 }
 
@@ -666,6 +675,7 @@ nav .search-icon {
         margin: auto;
         margin-top: 60px;
         font-size: 25px;
+        text-align: center;
     }
     .newsletter .form input {
         width: 260px;
@@ -673,6 +683,13 @@ nav .search-icon {
     }
     .newsletter .form button {
         padding: 5px 10px;
+    }
+    .newsletter .container {
+        max-width: 500px;
+        margin: auto;
+    }
+    .newsletter .form {
+        width: fit-content;
     }
 }
 
@@ -685,6 +702,7 @@ nav .search-icon {
     .newsletter .form input {
         width: 190px;
         font-size: 14px;
+        margin-left: 0;
     }
     .newsletter .form button {
         padding: 5px 10px;
@@ -857,6 +875,208 @@ nav .search-icon {
 
 
 /* ==========> End Blogs <========== */
+
+
+/* =*=*=*=*=*=*====>> Start Details Page <<====*=*=*=*=*=*= */
+
+.details-landing {
+    padding: 25px 0;
+    min-height: 300px;
+    background-image: url("../images/details-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.details .news-boxes {
+    display: grid;
+    grid-template-columns: 15% 50% 25%;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.details .news-boxes .categories {
+    background: var(--light-bg);
+}
+
+.details .categories .head {
+    background: #F43E60;
+    color: #fff;
+    padding: 20px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.details .categories a {
+    display: block;
+    color: #000;
+    padding: 0 15px;
+    margin: 15px 0;
+    transition: var(--main-transition);
+}
+
+.details .categories a:hover {
+    color: var(--dark-red-color);
+}
+
+.details img,
+.details video {
+    width: 100%;
+}
+
+.details .second-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.details .small-box {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.details .more-information {
+    display: grid;
+    grid-template-columns: 15% 50%;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.details .stocks {
+    background: var(--light-bg);
+}
+
+.details .stocks .head {
+    background: #F43E60;
+    color: #fff;
+    padding: 20px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.details .stocks .stock {
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .stocks .stock h5 {
+    font-size: 16px;
+    padding-bottom: 3px;
+}
+
+.details .stocks .stock h6 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.details .stocks .stock p {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 2.5px 0;
+}
+
+.details .main-box .news-info {
+    margin-top: -40px;
+}
+
+.details .news-info h4 {
+    font-size: 35px;
+    padding: 10px 0;
+}
+
+.details .news-info span {
+    font-size: 14px;
+    color: #969696;
+}
+
+.details .news-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.details .container-2 {
+    max-width: 65%;
+    margin: 20px auto;
+    border-top: 1px solid var(--main-color-alt);
+}
+
+.details .container-2>h2 {
+    padding: 30px 0;
+}
+
+.details .container-2 .sub-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 100px;
+    margin-top: 25px;
+}
+
+.details .container-2 h4 {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.details .container-2 span {
+    font-size: 15px;
+    color: #969696;
+    margin-bottom: 15px;
+}
+
+.details .container-2 p {
+    font-size: 16px;
+    color: #5A5A5A;
+    margin-top: 10px;
+}
+
+.details .container-2 img {
+    width: 100%;
+}
+
+@media(max-width: 1200px) {
+    .details .news-boxes {
+        grid-template-columns: 20% 70%;
+    }
+    .details .small-box {
+        display: none;
+    }
+    .details .stocks {
+        display: none;
+    }
+    .details .more-information {
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+    }
+    .details .container-2 {
+        width: 100%;
+    }
+    .details .container-2 .sub-news {
+        gap: 30px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 850px) {
+    .details .news-boxes {
+        grid-template-columns: 1fr;
+    }
+    .details .categories {
+        display: none;
+    }
+}
+
+@media(max-width: 650px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+
+/* =*=*=*=*=*=*====>> End Details Page <<====*=*=*=*=*=*= */
 
 
 /* ==========> Start Footer <========== */
