@@ -18,6 +18,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #fff;
 }
@@ -482,8 +486,7 @@ nav .search-icon {
 /* ==========> Start Lastest news <========== */
 
 .lastest {
-    padding-top: 25px;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 
 .lastest .sec-title {
@@ -1083,10 +1086,252 @@ nav .search-icon {
     .container {
         padding: 0 30px;
     }
+    .details .small-box.vid {
+        display: block;
+        margin-bottom: 50px;
+    }
 }
 
 
 /* =*=*=*=*=*=*====>> End Details Page <<====*=*=*=*=*=*= */
+
+
+/* =*=*=*=*=*=*====>> Start About Page <<====*=*=*=*=*=*= */
+
+.about-landing {
+    padding: 20px 0;
+}
+
+.about {
+    padding: 50px 0;
+}
+
+.about .page-title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.about .about-info p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 5px 50px;
+}
+
+.about .map {
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+.about .map img {
+    max-width: 100%;
+    opacity: 0.5;
+}
+
+.about .our-team {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+}
+
+.about .our-team .member {
+    text-align: center;
+    padding: 125px 15px 60px 15px;
+    color: #fff;
+    background: #330033;
+    border-radius: 5px;
+    position: relative;
+}
+
+.about .our-team .member>img {
+    position: absolute;
+    border-radius: 50%;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #fff;
+}
+
+.about .member h3 {
+    font-size: 25px;
+}
+
+.about .member h5 {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.about .member p {
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 20px;
+}
+
+.about .member .social {
+    margin-top: 25px;
+}
+
+.about .member .links {
+    margin-top: 25px;
+}
+
+.about .member .links a {
+    transition: var(--main-transition);
+    margin: 0 25px;
+    color: #fff;
+}
+
+.about .member .links i {
+    font-size: 30px;
+}
+
+.about .member .links a:hover {
+    color: var(--main-color-alt);
+}
+
+@media (max-width: 1290px) {
+    .about .our-team .member {
+        margin-top: 50px;
+    }
+    .about .our-team {
+        padding: 0;
+    }
+}
+
+@media (max-width: 715px) {
+    .about .our-team {
+        grid-template-columns: 1fr;
+    }
+    .about .page-title {
+        font-size: 50px;
+    }
+    .about .about-info p {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .about .member .links a {
+        margin: 0 15px;
+    }
+    .about .member p {
+        padding: 0;
+    }
+}
+
+
+/* =*=*=*=*=*=*====>> End About Page <<====*=*=*=*=*=*= */
+
+
+/* =*=*=*=*=*=*====>> Start Contact Page <<====*=*=*=*=*=*= */
+
+.contact-landing {
+    min-height: 400px;
+    background-image: url("../images/contact-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact {
+    padding: 50px 0;
+}
+
+.contact .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact .contact-info>h2 {
+    font-size: 40px;
+    color: #000;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.contact .contact-info h3 {
+    font-size: 25px;
+    color: #000;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.contact .contact-info p {
+    font-size: 18px;
+    color: #969696;
+    padding: 5px 0;
+}
+
+.contact .contact-form {
+    max-width: 75%;
+    margin: 50px auto;
+}
+
+.contact .contact-form .input-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contact-form .input-fields .field {
+    margin: 15px 0;
+    width: 300px;
+}
+
+.contact .contact-form .input-fields label,
+.contact .contact-form .msg label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.contact .contact-form .check {
+    margin: 15px 0;
+}
+
+.contact .contact-form .input-fields .field input,
+.contact .contact-form textarea {
+    min-width: 100%;
+    resize: none;
+    outline: none;
+    border: 1px solid #F43E60;
+    padding: 5px 10px;
+}
+
+.contact .contact-form .btn {
+    margin: 15px auto;
+    width: 100px;
+}
+
+.contact .contact-form .btn button {
+    padding: 5px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.contact .contact-form .btn button:hover {
+    background: var(--dark-red-color);
+}
+
+@media (max-width: 991px) {
+    .contact .contact-form .input-fields {
+        flex-direction: column;
+    }
+    .contact .contact-form .input-fields .field {
+        width: 100%;
+    }
+    .contact .contact-form {
+        max-width: 100%;
+    }
+}
+
+
+/* =*=*=*=*=*=*====>> End Contact Page <<====*=*=*=*=*=*= */
 
 
 /* ==========> Start Footer <========== */
@@ -1159,40 +1404,6 @@ footer .form button:hover {
     background: var(--dark-red-color);
 }
 
-@media(max-width: 1100px) {
-    footer .form {
-        flex-direction: column;
-    }
-    footer .form p {
-        padding-bottom: 10px;
-    }
-}
-
-@media(max-width: 715px) {
-    footer .subscribe>.container {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-    }
-    footer .mail {
-        width: fit-content;
-        margin: 0 auto;
-        margin-bottom: 8px;
-    }
-    footer .mail span {
-        border-right: none;
-    }
-}
-
-@media(max-width: 500px) {
-    footer .mail span {
-        font-size: 0.8rem;
-    }
-    footer .form button {
-        margin-top: 10px;
-    }
-}
-
 footer .footer .container {
     max-width: 85%;
     margin: auto;
@@ -1229,12 +1440,43 @@ footer .copy {
     margin-top: 25px;
 }
 
-@media(max-width: 500px) {
-    footer .footer {
+@media(max-width: 1100px) {
+    footer .form {
+        flex-direction: column;
+    }
+    footer .form p {
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width: 715px) {
+    footer .subscribe>.container {
+        flex-direction: column;
         text-align: center;
+        width: 100%;
+    }
+    footer .mail {
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+    footer .mail span {
+        border-right: none;
     }
     footer .footer a {
         margin: 10px auto;
+    }
+    footer .footer {
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    footer .mail span {
+        font-size: 0.8rem;
+    }
+    footer .form button {
+        margin-top: 10px;
     }
 }
 
