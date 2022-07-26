@@ -370,6 +370,7 @@ nav .search-icon {
     border-radius: 5px;
     position: relative;
     transition: var(--main-transition);
+    overflow: hidden;
 }
 
 .breaking .box-1 .details {
@@ -379,6 +380,10 @@ nav .search-icon {
     bottom: 0px;
     color: #fff;
     padding: 0 25px;
+}
+
+.breaking .box-1-box:hover .details {
+    box-shadow: -40px -14px -50px #000;
 }
 
 .breaking .box-1 .details h4 {
@@ -585,7 +590,7 @@ nav .search-icon {
     padding-top: 10px;
 }
 
-.lastest .container button {
+.lastest .container .btn {
     position: absolute;
     bottom: -50px;
     right: 0;
@@ -598,7 +603,7 @@ nav .search-icon {
     transition: var(--main-transition);
 }
 
-.lastest .container button:hover {
+.lastest .container .btn:hover {
     color: var(--main-color);
     background: var(--main-color-alt);
 }
@@ -1050,6 +1055,10 @@ nav .search-icon {
     width: 100%;
 }
 
+.details .mobile-vid {
+    display: none;
+}
+
 @media(max-width: 1200px) {
     .details .news-boxes {
         grid-template-columns: 20% 70%;
@@ -1085,6 +1094,10 @@ nav .search-icon {
 @media(max-width: 650px) {
     .container {
         padding: 0 30px;
+    }
+    .details .mobile-vid {
+        display: block;
+        margin-top: 10px;
     }
 }
 
